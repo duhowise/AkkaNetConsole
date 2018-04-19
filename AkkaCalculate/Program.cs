@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using Akka.Actor;
 
 namespace AkkaCalculate
@@ -9,12 +10,11 @@ namespace AkkaCalculate
         {
             var system = ActorSystem.Create("calc-system");
             var calculator = system.ActorOf<CalculatorActor>("calculator");
-
-
             var result = calculator.Ask<Answer>(new Add(1, 2)).Result;
             Console.WriteLine($"Addition Result: {result.Value}");
 
-            system.Terminate();
+          system.Terminate();
+            Console.Read();
         }
     }
 }
