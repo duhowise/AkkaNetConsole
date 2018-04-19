@@ -1,7 +1,7 @@
 ﻿using System;
 using Akka.Actor;
 
-namespace PoisonPillProgram
+namespace PoisonPill
 {
     public class EmailSenderActor:ReceiveActor
     {
@@ -13,6 +13,10 @@ namespace PoisonPillProgram
 
         private void EmailMessageHAndler(EmailMessage message)
         {
+            if (string.IsNullOrEmpty(message.Content))
+            {
+                throw new ArgumentException("Cannot handle the empty content");
+            }
             Console.WriteLine($"Email sent from {message.From} to{ message.To}");
         }
         protected override void PreStart()

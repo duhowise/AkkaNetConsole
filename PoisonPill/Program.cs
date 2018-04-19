@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Threading;
 using Akka.Actor;
-using PoisonPillProgram;
 
 namespace PoisonPill
 {
@@ -12,6 +11,18 @@ namespace PoisonPill
             //UsePoisonPill();
             //UseKill();
             //ExitGracefully();
+
+            ActorSystem system=ActorSystem.Create("my-first-Akka");
+            var emailSender = system.ActorOf<EmailSenderActor>("EmailSender");
+            //send Invalid Message(null content).
+            EmailMessage invalidEmail=new EmailMessage("from@email.com","to@email.com",null);
+            EmailMessage validEmail=new EmailMessage("from@email.com","to@email.com","Hi");
+
+            emailSender.Tell(validEmail);
+            emailSender.Tell(invalidEmail);
+            emailSender.Tell(validEmail);
+            Console.Read();
+            system.Terminate();
         }
 
         private static void ExitGracefully()

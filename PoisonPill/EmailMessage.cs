@@ -1,4 +1,4 @@
-﻿namespace PoisonPillProgram
+﻿namespace PoisonPill
 {
     public class EmailMessage
     {
