@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkkaCalculate", "AkkaCalcul
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoisonPill", "PoisonPill\PoisonPill.csproj", "{5C556E0E-B0A0-4FC4-93E5-2B02AB728772}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicApp", "MusicApp\MusicApp.csproj", "{D35E8C3D-4A5E-4307-B546-D10A6D538F14}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{5C556E0E-B0A0-4FC4-93E5-2B02AB728772}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C556E0E-B0A0-4FC4-93E5-2B02AB728772}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C556E0E-B0A0-4FC4-93E5-2B02AB728772}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D35E8C3D-4A5E-4307-B546-D10A6D538F14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D35E8C3D-4A5E-4307-B546-D10A6D538F14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D35E8C3D-4A5E-4307-B546-D10A6D538F14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D35E8C3D-4A5E-4307-B546-D10A6D538F14}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
